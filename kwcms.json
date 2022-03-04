@@ -1,0 +1,18 @@
+{
+  "author": "kalanis",
+  "name": "kw_semaphore",
+  "description": "Semaphore for states in KWCMS",
+  "source": "https://github.com/alex-kalanis/kw_semaphore",
+  "license": "BSD-3-Clause",
+  "require": {
+    "alex-kalanis/kw_paths": "dev-master",
+    "php": ">=7.3.0"
+  },
+  "suggest": {
+    "alex-kalanis/kw_semaphore": "dev-master"
+  },
+  "require-dev": {
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

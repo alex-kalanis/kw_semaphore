@@ -1,0 +1,30 @@
+{
+    "name": "alex-kalanis/kw_semaphore",
+    "description": "Semaphore for states in KWCMS",
+    "keywords": [
+        "semaphore",
+        "states"
+    ],
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "require": {
+        "alex-kalanis/kw_paths": ">=1.0",
+        "php": ">=7.3.0"
+    },
+    "require-dev": {
+        "alex-kalanis/kw_storage": ">=1.0",
+        "phpunit/phpunit": ">=7.2"
+    },
+    "suggest": {
+        "alex-kalanis/kw_storage": "Local storage for accessing resources"
+    },
+    "autoload": {
+        "psr-4": {
+            "kalanis\\kw_semaphore\\": "php-src/"
+        }
+    },
+    "scripts": {
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
