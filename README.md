@@ -1,5 +1,13 @@
 # kw_semaphore
 
+[![Build Status](https://travis-ci.org/alex-kalanis/kw_semaphore.svg?branch=master)](https://travis-ci.org/alex-kalanis/kw_semaphore)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/alex-kalanis/kw_semaphore/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/alex-kalanis/kw_semaphore/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/alex-kalanis/kw_semaphore/v/stable.svg?v=1)](https://packagist.org/packages/alex-kalanis/kw_semaphore)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.3-8892BF.svg)](https://php.net/)
+[![Downloads](https://img.shields.io/packagist/dt/alex-kalanis/kw_semaphore.svg?v1)](https://packagist.org/packages/alex-kalanis/kw_semaphore)
+[![License](https://poser.pugx.org/alex-kalanis/kw_semaphore/license.svg?v=1)](https://packagist.org/packages/alex-kalanis/kw_semaphore)
+[![Code Coverage](https://scrutinizer-ci.com/g/alex-kalanis/kw_semaphore/badges/coverage.png?b=master&v=1)](https://scrutinizer-ci.com/g/alex-kalanis/kw_semaphore/?branch=master)
+
 Simple semaphore to determine if some element did something.
 
 ## PHP Installation
