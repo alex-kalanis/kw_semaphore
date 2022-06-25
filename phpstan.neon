@@ -7,7 +7,7 @@ parameters:
 	scanFiles:
 		- 'php-tests/CommonTestClass.php'
 	excludePaths:
-		- 'php-tests/external/'
+#		- 'php-tests/external/'
 		- 'php-tests/_autoload.php'
 		- 'php-tests/_bootstrap.php'
 		- 'php-tests/CommonTestClass.php'
