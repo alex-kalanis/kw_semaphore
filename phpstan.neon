@@ -2,11 +2,11 @@ parameters:
 	level: 9
 	paths:
 		- 'php-src'
-	scanDirectories:
-		- 'php-tests/external/'
+#	scanDirectories:
+#		- 'php-tests/external/'
 	scanFiles:
 		- 'php-tests/CommonTestClass.php'
-	excludePaths:
+#	excludePaths:
 #		- 'php-tests/external/'
 		- 'php-tests/_autoload.php'
 		- 'php-tests/_bootstrap.php'
