@@ -6,7 +6,7 @@ namespace BasicTests;
 use kalanis\kw_semaphore\Interfaces\ISemaphore;
 use kalanis\kw_semaphore\Semaphore;
 use kalanis\kw_semaphore\SemaphoreException;
-use kalanis\kw_storage\Interfaces\IStorage;
+use kalanis\kw_storage\Interfaces\ITarget;
 use kalanis\kw_storage\Storage;
 
 
@@ -64,10 +64,21 @@ class StorageTest extends \CommonTestClass
         $lib->remove();
     }
 
-    protected function getSemaphore(IStorage $mockStorage): ISemaphore
+    /**
+     * @throws SemaphoreException
+     */
+    public function testStorageKill3(): void
+    {
+        $lib = $this->getSemaphore(new \MockKillingStorage(), 'fail');
+
+        $this->expectException(SemaphoreException::class);
+        $lib->has();
+    }
+
+    protected function getSemaphore(ITarget $mockStorage, string $rootPath = 'dummy'): ISemaphore
     {
         Storage\Key\DirKey::setDir(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR);
-        $storage = new Storage\Factory(new Storage\Target\Factory(), new Storage\Format\Factory(), new Storage\Key\Factory());
-        return new Semaphore\Storage($storage->getStorage($mockStorage), 'dummy');
+        $storage = new Storage\Factory(new Storage\Key\Factory(), new Storage\Target\Factory());
+        return new Semaphore\Storage($storage->getStorage($mockStorage), $rootPath);
     }
 }

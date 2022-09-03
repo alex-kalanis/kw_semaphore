@@ -12,7 +12,7 @@
         "php": ">=7.3.0"
     },
     "require-dev": {
-        "alex-kalanis/kw_storage": ">=1.0",
+        "alex-kalanis/kw_storage": ">=3.0",
         "friendsofphp/php-cs-fixer": "^3.0",
         "phpstan/phpstan": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
