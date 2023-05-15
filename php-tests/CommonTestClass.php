@@ -14,67 +14,6 @@ class CommonTestClass extends TestCase
 }
 
 
-class MockStorage implements ITarget
-{
-    protected $data = [];
-
-    public function check(string $key): bool
-    {
-        return true;
-    }
-
-    public function exists(string $key): bool
-    {
-        return isset($this->data[$key]);
-    }
-
-    public function load(string $key)
-    {
-        return $this->exists($key) ? $this->data[$key] : null ;
-    }
-
-    public function save(string $key, $data, ?int $timeout = null): bool
-    {
-        $this->data[$key] = $data;
-        return true;
-    }
-
-    public function remove(string $key): bool
-    {
-        if ($this->exists($key)) {
-            unset($this->data[$key]);
-        }
-        return true;
-    }
-
-    public function lookup(string $key): Traversable
-    {
-        yield from [];
-    }
-
-    public function increment(string $key): bool
-    {
-        $this->data[$key] = $this->exists($key) ? $this->data[$key] + 1 : 1 ;
-        return true;
-    }
-
-    public function decrement(string $key): bool
-    {
-        $this->data[$key] = $this->exists($key) ? $this->data[$key] - 1 : 0 ;
-        return true;
-    }
-
-    public function removeMulti(array $keys): array
-    {
-        $result = [];
-        foreach ($keys as $index => $key) {
-            $result[$index] = $this->remove($key);
-        }
-        return $result;
-    }
-}
-
-
 class MockFailedStorage implements ITarget
 {
     public function check(string $key): bool
@@ -133,7 +72,12 @@ class MockKillingStorage implements ITarget
 
     public function exists(string $key): bool
     {
+        // storage - has clear input
         if ('fail' . \kalanis\kw_semaphore\Interfaces\ISemaphore::EXT_SEMAPHORE == $key) {
+            throw new StorageException('mock fail');
+        }
+        // files - has slash on start
+        if (DIRECTORY_SEPARATOR . 'fail' . \kalanis\kw_semaphore\Interfaces\ISemaphore::EXT_SEMAPHORE == $key) {
             throw new StorageException('mock fail');
         }
         return false;

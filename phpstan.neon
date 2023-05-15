@@ -5,11 +5,11 @@ parameters:
 #	scanDirectories:
 #		- 'php-tests/external/'
 	scanFiles:
-		- 'php-tests/CommonTestClass.php'
-#	excludePaths:
-#		- 'php-tests/external/'
 		- 'php-tests/_autoload.php'
 		- 'php-tests/_bootstrap.php'
-		- 'php-tests/CommonTestClass.php'
+#		- 'php-tests/CommonTestClass.php'
+#	excludePaths:
+#		- 'php-tests/external/'
+#		- 'php-tests/CommonTestClass.php'
 	bootstrapFiles:
 		- 'php-tests/_autoload.php'
