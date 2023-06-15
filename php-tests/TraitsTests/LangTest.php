@@ -31,17 +31,17 @@ class XLang
 
 class XTrans implements ISMTranslations
 {
-    public function mnCannotOpenSemaphore(): string
+    public function smCannotOpenSemaphore(): string
     {
         return 'mock';
     }
 
-    public function mnCannotSaveSemaphore(): string
+    public function smCannotSaveSemaphore(): string
     {
         return 'mock';
     }
 
-    public function mnCannotGetSemaphoreClass(): string
+    public function smCannotGetSemaphoreClass(): string
     {
         return 'mock';
     }
