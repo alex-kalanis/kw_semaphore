@@ -6,10 +6,11 @@
   "license": "BSD-3-Clause",
   "require": {
     "alex-kalanis/kw_paths": "dev-master",
-    "php": ">=7.3.0"
+    "php": ">=7.4.0"
   },
   "suggest": {
-    "alex-kalanis/kw_semaphore": "dev-master"
+    "alex-kalanis/kw_storage": "dev-master",
+    "alex-kalanis/kw_files": "dev-master"
   },
   "require-dev": {
   },

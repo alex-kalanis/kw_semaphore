@@ -26,7 +26,7 @@ class MockFailedStorage implements ITarget
         return false;
     }
 
-    public function load(string $key)
+    public function load(string $key): string
     {
         return null;
     }
@@ -83,7 +83,7 @@ class MockKillingStorage implements ITarget
         return false;
     }
 
-    public function load(string $key)
+    public function load(string $key): string
     {
         throw new StorageException('mock fail');
     }
